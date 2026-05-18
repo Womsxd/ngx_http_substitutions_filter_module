@@ -804,7 +804,7 @@ ngx_http_subs_match_regex_substituion(ngx_http_request_t *r, sub_pair_t *pair,
  * Find the first occurrence of the byte string s in byte string l.
  */
 static void *
-subs_memmem(const void *l, size_t l_len, const void *s, size_t s_len)
+subs_memmem(void *l, size_t l_len, void *s, size_t s_len)
 {
     register char *cur, *last;
     const char *cl = (const char *)l;
